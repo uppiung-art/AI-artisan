@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+/* 컬러 변수 정의 */
+:root {
+  /* Light mode colors */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  
+  /* Brand colors */
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #0ea5e9;
+  --secondary-foreground: #ffffff;
+  --success: #22c55e;
+  --success-foreground: #ffffff;
+  
+  /* Semantic colors */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1220;
+    --foreground: #cbd5e1;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --border: #334155;
+    --accent: #1e293b;
+    --accent-foreground: #cbd5e1;
+    
+    --card: #0f1629;
+    --card-foreground: #cbd5e1;
+    --popover: #0f1629;
+    --popover-foreground: #cbd5e1;
+  }
+}
+
+/* 기본 스타일 */
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+/* 선택 영역 스타일 */
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* 포커스 링 */
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* 반응형 텍스트 - 모바일 최적화 */
+.text-responsive-xl {
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.text-responsive-base {
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
+}
+
+.text-responsive-sm {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  line-height: 1.5;
+}
+
+/* 모바일 전용 텍스트 크기 */
+@media (max-width: 640px) {
+  .text-mobile-hero {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    line-height: 1.1;
+  }
+  
+  .text-mobile-title {
+    font-size: clamp(1.125rem, 5vw, 1.5rem);
+    line-height: 1.2;
+  }
+  
+  .text-mobile-body {
+    font-size: clamp(0.875rem, 3.5vw, 1rem);
+    line-height: 1.6;
+  }
+}
+
+/* 그라데이션 */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 카드 그림자 */
+.card-shadow {
+  box-shadow: 
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card-shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 다크모드에서 그림자 조정 */
+@media (prefers-color-scheme: dark) {
+  .card-shadow {
+    box-shadow: 
+      0 1px 3px 0 rgba(0, 0, 0, 0.3),
+      0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-shadow-lg {
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.3),
+      0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* 모바일 최적화 스타일 */
+@media (max-width: 768px) {
+  /* 모바일에서 더 큰 터치 타겟 */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* 모바일에서 더 넉넉한 패딩 */
+  .mobile-padding {
+    padding: 1rem;
+  }
+  
+  /* 모바일에서 더 작은 간격 */
+  .mobile-spacing {
+    gap: 0.75rem;
+  }
+  
+  /* 모바일 네비게이션 최적화 */
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    padding: 0.75rem;
+    z-index: 50;
+  }
+}
+
+/* 고대비 모드 지원 */
+@media (prefers-contrast: high) {
+  :root {
+    --foreground: #000000;
+    --background: #ffffff;
+    --border: #000000;
+    --primary: #0000ff;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground: #ffffff;
+      --background: #000000;
+      --border: #ffffff;
+      --primary: #00ffff;
+    }
+  }
+}
+
+/* 모션 감소 설정 존중 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-fade-in-up,
+  .animate-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 포커스 개선 */
+.focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 모바일에서 더 나은 스크롤 */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+  
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}

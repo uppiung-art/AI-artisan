@@ -1,0 +1,33 @@
+[
+  {
+    "category": "조직문화",
+    "skills": [
+      { "name": "조직진단", "level": 90, "experience": "5년+" },
+      { "name": "변화관리", "level": 85, "experience": "4년+" },
+      { "name": "구성원경험(EX)", "level": 88, "experience": "3년+" },
+      { "name": "문화설계", "level": 82, "experience": "3년+" },
+      { "name": "갈등관리", "level": 80, "experience": "4년+" },
+      { "name": "소통촉진", "level": 85, "experience": "5년+" }
+    ]
+  },
+  {
+    "category": "교육 & 개발",
+    "skills": [
+      { "name": "교육기획", "level": 85, "experience": "4년+" },
+      { "name": "리더십코칭", "level": 80, "experience": "3년+" },
+      { "name": "퍼실리테이션", "level": 88, "experience": "4년+" },
+      { "name": "멘토링", "level": 82, "experience": "3년+" },
+      { "name": "워크샵설계", "level": 85, "experience": "4년+" }
+    ]
+  },
+  {
+    "category": "분석 & 도구",
+    "skills": [
+      { "name": "데이터분석", "level": 75, "experience": "3년+" },
+      { "name": "설문설계", "level": 85, "experience": "4년+" },
+      { "name": "Excel/PowerBI", "level": 80, "experience": "5년+" },
+      { "name": "HRIS", "level": 78, "experience": "4년+" },
+      { "name": "프로젝트관리", "level": 82, "experience": "4년+" }
+    ]
+  }
+]

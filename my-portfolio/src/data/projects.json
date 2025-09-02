@@ -1,0 +1,71 @@
+[
+  {
+    "id": "p-001",
+    "title": "조직문화 진단 및 개선 프로젝트",
+    "role": "조직문화 담당자",
+    "period": "2024.01 - 2024.06",
+    "summary": "전사 조직문화 진단을 통한 개선 방안 도출 및 실행, 구성원 만족도 25% 향상",
+    "highlights": [
+      "전사 구성원 500명 대상 조직문화 진단 실시",
+      "데이터 기반 문화 개선 로드맵 수립",
+      "구성원 만족도 70%에서 87%로 향상"
+    ],
+    "stack": ["설문조사", "데이터분석", "워크샵", "변화관리"],
+    "links": {
+      "demo": "#",
+      "repo": "#"
+    },
+    "thumb": "/images/projects/culture-diagnosis.webp",
+    "tags": ["culture", "survey", "improvement"],
+    "metrics": {
+      "satisfaction": 87,
+      "improvement": 25
+    }
+  },
+  {
+    "id": "p-002", 
+    "title": "리더십 역량 개발 프로그램",
+    "role": "교육 기획자",
+    "period": "2023.09 - 2024.02",
+    "summary": "중간관리자 대상 리더십 교육 프로그램 기획 및 운영, 팀 성과 20% 개선",
+    "highlights": [
+      "코칭 기반 리더십 교육 커리큘럼 설계",
+      "멘토링 시스템 구축으로 지속적 성장 지원",
+      "참여 팀의 성과지표 평균 20% 개선"
+    ],
+    "stack": ["교육기획", "코칭", "멘토링", "성과측정"],
+    "links": {
+      "demo": "#",
+      "repo": "#"
+    },
+    "thumb": "/images/projects/leadership.webp",
+    "tags": ["leadership", "education", "coaching"],
+    "metrics": {
+      "participants": 45,
+      "improvement": 20
+    }
+  },
+  {
+    "id": "p-003",
+    "title": "원격근무 문화 정착 프로젝트",
+    "role": "변화관리 리더",
+    "period": "2023.03 - 2023.12", 
+    "summary": "하이브리드 근무제 도입을 위한 문화 변화 관리, 업무 효율성 15% 향상",
+    "highlights": [
+      "원격근무 가이드라인 및 정책 수립",
+      "디지털 협업 도구 도입 및 교육 실시",
+      "근무 만족도 향상 및 업무 효율성 15% 개선"
+    ],
+    "stack": ["정책수립", "변화관리", "디지털전환", "협업도구"],
+    "links": {
+      "demo": "#",
+      "repo": "#"
+    },
+    "thumb": "/images/projects/remote-work.webp", 
+    "tags": ["remote", "policy", "digital"],
+    "metrics": {
+      "efficiency": 15,
+      "adoption": 95
+    }
+  }
+]
